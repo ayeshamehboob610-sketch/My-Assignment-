@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University of Layyah</title>
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8fff9,
+                    #fffaf3
+                );
+
+            color: #222;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            padding: 15px 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            /* SMOOTH MERGED COLORS */
+            background:
+                linear-gradient(
+                    110deg,
+                    #087f5b,
+                    #15966c,
+                    #6aa84f,
+                    #d8a21b,
+                    #f28c28
+                );
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.20);
+
+            border-bottom: 2px solid rgba(255,255,255,0.5);
+        }
+
+
+        /* =========================
+           LOGO AREA
+        ========================= */
+
+        .logo-area {
+
+            display: flex;
+            align-items: center;
+
+            gap: 15px;
+        }
+
+
+        .logo-area img {
+
+            width: 72px;
+            height: 72px;
+
+            object-fit: contain;
+
+            background: white;
+
+            padding: 5px;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.25);
+
+            transition: 0.4s;
+        }
+
+
+        .logo-area img:hover {
+
+            transform:
+                scale(1.08)
+                rotate(4deg);
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.35);
+        }
+
+
+        /* =========================
+           UNIVERSITY NAME
+        ========================= */
+
+        .university-name h1 {
+
+            color: white;
+
+            font-size: 27px;
+
+            letter-spacing: 1px;
+
+            text-shadow:
+                2px 3px 6px rgba(0,0,0,0.35);
+        }
+
+
+        .university-name p {
+
+            color: #fff;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            opacity: 0.95;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+
+            display: flex;
+
+            gap: 8px;
+        }
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: white;
+
+            font-weight: bold;
+
+            padding: 10px 17px;
+
+            border-radius: 30px;
+
+            border: 1px solid rgba(255,255,255,0.65);
+
+            background:
+                rgba(255,255,255,0.12);
+
+            backdrop-filter: blur(5px);
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            background: white;
+
+            color: #087f5b;
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 7px 18px rgba(0,0,0,0.25);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+
+            padding:
+                75px 7%
+                70px;
+
+            text-align: center;
+
+            background:
+
+                radial-gradient(
+                    circle at top left,
+                    rgba(21,150,108,0.15),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    rgba(242,140,40,0.15),
+                    transparent 35%
+                );
+        }
+
+
+        .hero h2 {
+
+            font-size: 44px;
+
+            margin-bottom: 12px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #087f5b,
+                    #45a85c,
+                    #e38b20,
+                    #f28c28
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .hero p {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            color: #555;
+        }
+
+
+        /* =========================
+           UNIVERSITY IMAGE
+        ========================= */
+
+        .main-image {
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            height: 500px;
+
+            object-fit: cover;
+
+            margin: 40px auto 0;
+
+            display: block;
+
+            border-radius: 35px;
+
+            border: 7px solid white;
+
+            box-shadow:
+
+                0 15px 40px
+                rgba(0,0,0,0.22),
+
+                0 0 0 3px
+                rgba(21,150,108,0.5);
+
+            transition: 0.5s;
+        }
+
+
+        .main-image:hover {
+
+            transform:
+                scale(1.015);
+
+            box-shadow:
+
+                0 20px 50px
+                rgba(0,0,0,0.3),
+
+                0 0 0 4px
+                rgba(242,140,40,0.7);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+
+            padding:
+                75px 8%;
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            font-size: 36px;
+
+            margin-bottom: 40px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #087f5b,
+                    #6aa84f,
+                    #e38b20,
+                    #f28c28
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .section-title::after {
+
+            content: "";
+
+            display: block;
+
+            width: 90px;
+
+            height: 4px;
+
+            margin:
+                12px auto;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #087f5b,
+                    #f28c28
+                );
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        #about {
+
+            background:
+                rgba(255,255,255,0.75);
+        }
+
+
+        .about-box {
+
+            max-width: 1050px;
+
+            margin: auto;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            background:
+                rgba(255,255,255,0.9);
+
+            box-shadow:
+                0 12px 35px
+                rgba(0,0,0,0.10);
+
+            border-left:
+                6px solid #087f5b;
+
+            border-right:
+                6px solid #f28c28;
+
+            transition: 0.4s;
+        }
+
+
+        .about-box:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,0.16);
+        }
+
+
+        .about-box p {
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            text-align: justify;
+
+            color: #444;
+        }
+
+
+        /* =========================
+           LIBRARY
+        ========================= */
+
+        #library {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #f0fff8,
+                    #fff8ed
+                );
+        }
+
+
+        .library-container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 40px;
+
+            align-items: center;
+        }
+
+
+        .library-image {
+
+            width: 100%;
+
+            height: 370px;
+
+            object-fit: cover;
+
+            border-radius: 28px;
+
+            border: 6px solid white;
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.22);
+
+            transition: 0.4s;
+        }
+
+
+        .library-image:hover {
+
+            transform:
+                scale(1.025);
+
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,0.3);
+        }
+
+
+        .library-text {
+
+            padding: 35px;
+
+            border-radius: 25px;
+
+            background: white;
+
+            box-shadow:
+                0 12px 35px
+                rgba(0,0,0,0.12);
+
+            border-top:
+                5px solid #087f5b;
+
+            border-bottom:
+                5px solid #f28c28;
+
+            transition: 0.4s;
+        }
+
+
+        .library-text:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,0.18);
+        }
+
+
+        .library-text h3 {
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+
+            color: #087f5b;
+        }
+
+
+        .library-text p {
+
+            color: #555;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        #contact {
+
+            background: white;
+        }
+
+
+        .cards {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 25px;
+        }
+
+
+        .card {
+
+            padding: 35px;
+
+            text-align: center;
+
+            background: white;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.10);
+
+            transition: 0.4s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 5px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #087f5b,
+                    #f28c28
+                );
+        }
+
+
+        .card:hover {
+
+            transform:
+                translateY(-10px);
+
+            box-shadow:
+                0 20px 40px
+                rgba(0,0,0,0.18);
+        }
+
+
+        .card h3 {
+
+            color: #087f5b;
+
+            font-size: 22px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .card p {
+
+            color: #555;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           ABOUT US
+        ========================= */
+
+        #about-us {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #f6fff9,
+                    #fffaf2
+                );
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding: 30px;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+
+                linear-gradient(
+                    110deg,
+                    #087f5b,
+                    #15966c,
+                    #6aa84f,
+                    #d8a21b,
+                    #f28c28
+                );
+
+            box-shadow:
+                0 -8px 25px
+                rgba(0,0,0,0.15);
+        }
+
+
+        footer h3 {
+
+            font-size: 22px;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+
+            nav {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .library-container {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .cards {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .main-image {
+
+                height: 380px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .logo-area {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .university-name h1 {
+
+                font-size: 22px;
+            }
+
+
+            .hero h2 {
+
+                font-size: 31px;
+            }
+
+
+            .main-image {
+
+                height: 260px;
+
+                border-radius: 22px;
+            }
+
+
+            .about-box {
+
+                padding: 25px;
+            }
+
+
+            nav a {
+
+                padding: 8px 12px;
+
+                font-size: 13px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="logo-area">
+
+            <img
+                src="logo.png"
+                alt="University of Layyah Logo"
+            >
+
+            <div class="university-name">
+
+                <h1>University of Layyah</h1>
+
+                <p>Excellence in Education & Innovation</p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#library">Library</a>
+
+            <a href="#contact">Contact</a>
+
+            <a href="#about-us">About Us</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <h2>
+            Welcome to University of Layyah
+        </h2>
+
+        <p>
+
+            Discover a modern environment for learning,
+            research, innovation and personal development.
+            The University of Layyah is committed to
+            providing students with quality education
+            and opportunities for a successful future.
+
+        </p>
+
+
+        <img
+            src="images.jpeg.png"
+            alt="University of Layyah"
+            class="main-image"
+        >
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT UNIVERSITY
+    ========================== -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About University
+        </h2>
+
+
+        <div class="about-box">
+
+            <p>
+
+                The University of Layyah is an institution
+                dedicated to providing quality higher education
+                and creating a supportive academic environment
+                for students.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                The university focuses on academic excellence,
+                research, innovation and practical learning.
+                Students are encouraged to develop their
+                knowledge, creativity and professional skills.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Through dedicated faculty, modern facilities
+                and a student-focused environment, the
+                University of Layyah aims to contribute to
+                the educational and social development of
+                the region.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         LIBRARY
+    ========================== -->
+
+    <section id="library">
+
+        <h2 class="section-title">
+            University Library
+        </h2>
+
+
+        <div class="library-container">
+
+
+            <img
+                src="the_library.png"
+                alt="University Library"
+                class="library-image"
+            >
+
+
+            <div class="library-text">
+
+                <h3>
+                    📚 University Library
+                </h3>
+
+                <p>
+
+                    The University Library provides a peaceful
+                    and supportive environment for students,
+                    teachers and researchers.
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    Students can use the library for reading,
+                    assignments, research, academic projects
+                    and examination preparation. It provides
+                    an important space for learning and
+                    knowledge development.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            Contact Us
+        </h2>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>📍 Location</h3>
+
+                <p>
+                    University of Layyah<br>
+                    Layyah, Punjab, Pakistan
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📧 Email</h3>
+
+                <p>
+                    info@university.edu.pk
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📞 Phone</h3>
+
+                <p>
+                    +92 XXX XXXXXXX
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT US
+    ========================== -->
+
+    <section id="about-us">
+
+        <h2 class="section-title">
+            About Us
+        </h2>
+
+
+        <div class="about-box">
+
+            <p>
+
+                This website presents information about
+                the University of Layyah, its educational
+                environment, facilities and student
+                services.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Our aim is to provide visitors with a
+                simple, attractive and user-friendly
+                university website experience.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h3>
+            University of Layyah
+        </h3>
+
+        <p>
+            © 2026 University of Layyah | All Rights Reserved
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
